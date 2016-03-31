@@ -1,20 +1,20 @@
 {
-  "name": "hash",
+  "name": "hashie",
   "version": "1.0.0",
-  "description": "hash is a small library that implements a hash data structure.",
+  "description": "hashie is a small library that implements a hash data structure.",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oelizondo/hash.git"
+    "url": "git+https://github.com/oelizondo/hashie.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oelizondo/hash/issues"
+    "url": "https://github.com/oelizondo/hashie/issues"
   },
-  "homepage": "https://github.com/oelizondo/hash#readme",
+  "homepage": "https://github.com/oelizondo/hashie#readme",
   "devDependencies": {
     "babel": "^6.5.2"
   }
