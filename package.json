@@ -1,0 +1,21 @@
+{
+  "name": "hash",
+  "version": "1.0.0",
+  "description": "hash is a small library that implements a hash data structure.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oelizondo/hash.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oelizondo/hash/issues"
+  },
+  "homepage": "https://github.com/oelizondo/hash#readme",
+  "devDependencies": {
+    "babel": "^6.5.2"
+  }
+}
