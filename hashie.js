@@ -13,7 +13,7 @@ Hashie.prototype.getCount = function getCount() {
 }
 
 Hashie.prototype.add = function add(num) {
-  var key = this.genKey(num);
+  var key = this.genKey(Math.floor(num));
   if (this.arr[key] == null) {
     this.arr[key] = [];
     this.arr[key].push(num);
@@ -39,13 +39,21 @@ Hashie.prototype.dump = function dump() {
 }
 
 Hashie.prototype.find = function find(num) {
-  var key = this.genKey(number);
-  return this.arr[key] == number ? true : false
+  var key = this.genKey(num);
+  if(this.arr[key] == null) {
+    return false;
+  }
+  else {
+    for(var i = 0; i < this.arr[key].length; i++)
+      if(this.arr[key][i] == num)
+        return true;
+  }
+  return false;
 }
 
 Hashie.prototype.print = function() {
-  return this.arr.forEach(function(number){
-    console.log(number);
+  return this.arr.forEach(function(array){
+    console.log(array);
   });
 }
 

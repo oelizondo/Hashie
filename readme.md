@@ -28,7 +28,7 @@ myHash.erase(10);
 For every element you want to insert (e.g. 543) a new key is generated with a custom modulo (on creation). So the key for ```var myHash = new Hashie(10)``` would be ```yourNumber % 10```. Hashie will push in the position 3 (from 543) and insert the number 543 there.
 
 
-### API functions
+### API methods
 The following methods exist for Hashie (more coming):
 
 ```javascript
@@ -54,4 +54,12 @@ Since it's a vector, colissions are handled with a simple push method. so the ke
 
 ### Optimization
 
-Hash is designed for large amounts of data that avoid many colissions (e.g. 01192543 with a key of % 100 to be 43). For a set of 150_000 ids, there'd only be around 150 colissions (which is good).
+Hashie is designed for large amounts of data that avoid many colissions (e.g. 01192543 with a key of % 100 to be 43). For a set of 150_000 ids, there'd only be around 150 colissions (which is good).
+
+### Data types
+
+Hashie accepts ```ints``` and ```floats``` for now.
+
+<!-- ### Avoid
+
+Adding numbers with the same key (430, 320, 540, 870) exclusively, as this will only generate a single array. -->
