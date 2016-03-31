@@ -1,6 +1,6 @@
 {
   "name": "hashie",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "hashie is a small library that implements a hash data structure.",
   "main": "index.js",
   "scripts": {},
