@@ -1,10 +1,10 @@
-## hash
+## Hashie
 
-hash is a small library that implements a hash data structure.
+Hashie is a small library that implements a hash data structure.
 
 ### What it does
 
-For every element you want to insert (e.g. 543) a new key is generated with a % 10 modulo(for now). So the key for 543 is 43. hash will create a vector in the position 43 and insert the number 543 there.
+For every element you want to insert (e.g. 543) a new key is generated with a % 10 modulo(for now). So the key for 543 is 43. Hashie will create a vector in the position 43 and insert the number 543 there.
 
 ### Colissions
 
