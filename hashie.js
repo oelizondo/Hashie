@@ -2,6 +2,7 @@ function Hashie(mod) {
   this.arr   = [];
   this.mod   = mod;
   this.count = 0;
+  this.keyChain = []
 }
 
 Hashie.prototype.genKey = function genKey(num) {
@@ -10,6 +11,20 @@ Hashie.prototype.genKey = function genKey(num) {
 
 Hashie.prototype.getCount = function getCount() {
   return this.count;
+}
+
+Hashie.prototype.getHash = function getHash() {
+  return this.arr;
+}
+
+Hashie.prototype.getKeyChain = function getKeyChain() {
+  return this.keyChain;
+}
+
+Hashie.prototype.print = function print() {
+  return this.arr.forEach(function(array){
+    console.log(array);
+  });
 }
 
 Hashie.prototype.add = function add(num) {
@@ -21,6 +36,7 @@ Hashie.prototype.add = function add(num) {
   else {
     this.arr[key].push(num);
   }
+  this.keyChain.push(key)
   this.count++;
   return true;
 }
@@ -51,10 +67,8 @@ Hashie.prototype.find = function find(num) {
   return false;
 }
 
-Hashie.prototype.print = function() {
-  return this.arr.forEach(function(array){
-    console.log(array);
-  });
+Hashie.prototype.drawer = function drawer(drawerNumber) {
+  return this.arr[this.keyChain[drawerNumber]];
 }
 
 module.exports = Hashie;
