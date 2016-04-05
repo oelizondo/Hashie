@@ -2,7 +2,7 @@
 
 Hashie is a small library that implements a hash data structure.
 
-### Installartion
+### Installation
 ```console
 npm i hashie
 ```
@@ -10,7 +10,7 @@ npm i hashie
 ### Usage
 
 ```javascript
-var Hashie = require('./hashie');
+var Hashie = require('hashie');
 
 //create a new Hashie object with the desired key.
 var myHash = new Hashie(10);
@@ -44,13 +44,28 @@ myHash.find(number);
 //Returns the amount of elements in the hash
 myHash.getCount();
 
+//Returns the kays used so far
+myHash.getKeyChain();
+
+//Returns the whole data structure
+myHash.getHash();
+
+//Returns the singular array stored in the hash
+myHash.drawer(0); //index of drawer
+
+//Erases a certain element of the hash
+myHash.erase(x) // number to be deleted
+
+//Prints the hash
+myHash.print();
+
 //Resets the hash
 myHash.dump();
 ```
 
 ### Colissions
 
-Since it's a vector, colissions are handled with a simple push method. so the key 3 can have multiple values (543, 643, 943, 743, etc).
+Since it's an array, colissions are handled with a simple push method. so the key 3 can have multiple values (543, 643, 943, 743, etc).
 
 ### Optimization
 
@@ -60,6 +75,6 @@ Hashie is designed for large amounts of data that avoid many colissions (e.g. 01
 
 Hashie accepts ```ints``` and ```floats``` for now.
 
-<!-- ### Avoid
+### Avoid
 
-Adding numbers with the same key (430, 320, 540, 870) exclusively, as this will only generate a single array. -->
+Adding numbers with the same key (430, 320, 540, 870) exclusively, as this will only generate a single array.
