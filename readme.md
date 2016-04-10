@@ -42,13 +42,13 @@ myHash.erase(number);
 myHash.find(number);
 
 //Returns the amount of elements in the hash
-myHash.getCount();
+myHash.getCounter();
 
 //Returns the kays used so far
 myHash.getKeyChain();
 
 //Returns the whole data structure
-myHash.getHash();
+myHash.getHashTable();
 
 //Returns the singular array stored in the hash
 myHash.drawer(0); //index of drawer
@@ -63,18 +63,18 @@ myHash.print();
 myHash.dump();
 ```
 
-### Colissions
-
-Since it's an array, colissions are handled with a simple push method. so the key 3 can have multiple values (543, 643, 943, 743, etc).
-
-### Optimization
-
-Hashie is designed for large amounts of data that avoid many colissions (e.g. 01192543 with a key of % 100 to be 43). For a set of 150_000 ids, there'd only be around 150 colissions (which is good).
-
 ### Data types
 
 Hashie accepts ```ints``` and ```floats``` for now.
 
-### Avoid
+### Colissions
+
+Since it's an array, colissions are handled with a simple push method. so the drawer with key 3 can have multiple values (543, 643, 943, 743, etc).
+
+### Optimization
+
+Hashie is designed for large amounts of data that avoid many colissions (e.g. 01192543 with a key of % 100 to be 43). For a set of 150,000 ids, there'd only be around 150 colissions (which is good). This means that for searching for a specific piece of data, instead of looking in 150,000 elements, you'd only look at about 150
+
+#### Avoid
 
 Adding numbers with the same key (430, 320, 540, 870) exclusively, as this will only generate a single array.
