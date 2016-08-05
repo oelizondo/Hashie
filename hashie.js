@@ -68,20 +68,19 @@ Hashie.prototype.dump = function dump() {
   return true;
 }
 
+Hashie.prototype._linearSearch = function _linearSearch(key) {
+  for(var i = 0; i < this.hashTable[key].length; i++) {
+    if(this.hashTable[key][i] == number) {
+      return true
+    }
+  }
+  return false
+}
+
 //Finds an element in the HashTable
 Hashie.prototype.find = function find(number) {
   var key = this.generateKey(number);
-  //If the number doesn't generate a used Key
-  if(this.hashTable[key] == null) {
-    return false;
-  }
-  else { //else, looks at the desires drawer linearly (todo: improve the search method in drawers)
-    for(var i = 0; i < this.hashTable[key].length; i++)
-      if(this.hashTable[key][i] == number)
-        return true;
-  }
-
-  return false;
+  return _linearSearch(key);
 }
 
 //Returns a single drawer of the HashTable with its elements
